@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!-- 
+    *  Document     : cube-slider.html
+    *  Created on   : 29 Nov, 2015, 4:45:25 PM
+    *  Author       : pkjana
+    *  Organization : IIT Khatagpur
+-->
+<html lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css" href="./css/style.css">
+
+        <script type="text/javascript" src="../lib/js/threejs/three.min.js"></script>
+        <script type="text/javascript" src="../lib/js/threejs/TrackballControls.js"></script>
+        <script type="text/javascript" src="../lib/js/threejs/Detector.js"></script>
+        <script type="text/javascript" src="../lib/js/threejs/stats.min.js"></script> 
+
+        <script type="text/javascript" src="./js/axis.js"></script>
+        <script type="text/javascript" src="./js/scene.js"></script>
+        <script type="text/javascript" src="./js/controller.js"></script>
+    </head>
+    <body>
+        <div id="main-wrapper">
+            <div id="canvas3d-wrapper">
+                <div id="canvas3d-title">Simulator</div>            
+                <div id="canvas3d-view"></div>           
+            </div>
+
+            <div id="controller-graph-wrapper">
+                <div id="controller-wrapper">
+                    <div id="controller-title">Controller</div>
+                    <div id="controller-view">
+                        <input id="slider1" type="range" min="-360" max="360" step="10" value="0" oninput="sliderChange()">
+                        <input id="rangeValue1" type="text" size="2" value="0">
+                    </div>  
+                </div>
+                <div id="graph-wrapper">
+                    <div id="graph-title">Graph</div>
+                    <div id="graph-view"></div> 
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
