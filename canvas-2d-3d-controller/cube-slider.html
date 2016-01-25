@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <!--------------------canvas2d---------------------------------->        
+        <link rel="stylesheet" type="text/css" href="./css/style.css">
+        <link rel="stylesheet" type="text/css" href="../lib/css/jquery/jquery-ui.css">
+
+        <!---------------------javascript library------------------------------->
+        <script type="text/javascript" src="../lib/js/threejs/three.min.js"></script>
+        <script type="text/javascript" src="../lib/js/threejs/TrackballControls.js"></script>
+        <script type="text/javascript" src="../lib/js/threejs/Detector.js"></script>
+        <script type="text/javascript" src="../lib/js/threejs/stats.min.js"></script> 
+
+        <!---------------------jquery and jquery-ui library------------------------------->
+        <script type="text/javascript" src="../lib/js/jquery/jquery-1.10.2.js"></script>      
+        <script type="text/javascript" src="../lib/js/jquery/jquery-ui-1.11.4.js"></script>
+
+        <!---------------------scene and controller------------------------------->
+        <script type="text/javascript" src="./js/axis.js"></script>
+        <script type="text/javascript" src="./js/scene.js"></script>
+        <script type="text/javascript" src="./js/controller.js"></script>
+
+        <!---------------------canvas2D controller------------------------------->
+        <script type="text/javascript" src="./js/canvas2D.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                $("#controller-view").tabs();
+            });
+        </script>
+    </head>
+    <body>
+        <div id="main-wrapper">
+            <h2>Cube Slider Example</h2>
+            <div id="canvas3d-controller-wrapper">
+                <div id="canvas3d-wrapper">
+                    <div id="canvas3d-title">Simulator</div>            
+                    <div id="canvas3d-view"></div>           
+                </div>
+
+                <div id="controller-graph-wrapper">
+                    <div id="controller-wrapper">
+                        <div id="controller-title">Controller</div>
+                        <div id="controller-view">                       
+                            <ul>
+                                <li><a href="#tabs-1">Input Data</a></li>
+                                <li><a href="#tabs-2">Plot Data</a></li>
+                                <li><a href="#tabs-3">Output Control</a></li>
+                            </ul>
+                            <div id="tabs-1">
+                                Enter no:<input id="t1">
+                                <button id="b1">Toggle/OK</button>
+                            </div>
+                            <div id="tabs-2">
+                                Enter no:<input id="t2">
+                                <button id="b2">Toggle</button>
+                            </div>
+                            <div id="tabs-3">                           
+                                <input id="slider1" type="range" min="-360" max="360" step="10" value="0" oninput="sliderChange()">
+                                <input id="rangeValue1" type="text" size="2" value="0">
+                            </div>
+                        </div>  
+                    </div><!-- end of controller-wrapper -->
+                    <div id="graph-wrapper">
+                        <div id="graph-title">Graph</div>
+                        <div id="graph-view"></div> 
+                    </div>
+                </div><!-- end of controller-graph-wrapper -->
+            </div><!-- end of canvas3d-controller-wrapper -->
+        </div><!-- end of main-wrapper -->
+    </body>
+</html>
