@@ -10,7 +10,9 @@
 /*---------------------------Don't edit this area ----------------------------*/
 // Initialize Simulation on page load
 function initializeSimulation() {
-    CUBEScene.init();    
+    CUBEScene.init();
+    document.getElementById("clockwise").onclick = animateClockwise;
+    document.getElementById("anti-clockwise").onclick = animateAntiClockwise;
     animate();
 }
 //  action will take place when windo resize
@@ -35,4 +37,30 @@ function sliderChange() {
     CUBEScene.cube.rotation.y = +sliderVal * (Math.PI / 180);
     // render
     render();
+}
+var timer, count;
+var animateClockwise = function () {
+    clearInterval(timer); //clear timer
+    count = -360;
+    timer = setInterval(function () {
+        CUBEScene.cube.rotation.y = +count * (Math.PI / 180);
+        render();
+        if (count >= 360)
+            clearInterval(timer);
+        else
+            count = count + 1;
+    }, 50);
+}
+var animateAntiClockwise = function () {
+    
+    clearInterval(timer); //clear timer
+    count = 360;
+    timer = setInterval(function () {
+        CUBEScene.cube.rotation.y = +count * (Math.PI / 180);
+        render();
+        if (count <= -360)
+            clearInterval(timer);
+        else
+            count = count - 1;
+    }, 50);
 }
