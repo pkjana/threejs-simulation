@@ -2,7 +2,7 @@
  * 
  *  Document     : axis.js
  *  Created on   : 29 Nov, 2015, 4:45:25 PM
- *  Author       : pkjana
+ *  Author       : Pabitra K Jana
  *  Organization : IIT Khatagpur
  *  
  */
