@@ -1,0 +1,48 @@
+<!-- 
+Document     : cube-animation-start-stop.html
+Created on   : 29 Nov, 2015, 4:45:25 PM
+Author       : Pabitra K Jana, Mitrajit Samanta
+Organization : IIT Kharagpur
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <!--------------------style---------------------------------->        
+        <link rel="stylesheet" type="text/css" href="./css/style.css">        
+
+        <!---------------------javascript library------------------------------->
+        <script type="text/javascript" src="../lib/js/threejs/three.min.js"></script>
+        <script type="text/javascript" src="../lib/js/threejs/TrackballControls.js"></script>
+        <script type="text/javascript" src="../lib/js/threejs/Detector.js"></script>
+        <script type="text/javascript" src="../lib/js/threejs/stats.min.js"></script> 
+
+        <!---------------------scene and controller------------------------------->
+        <script type="text/javascript" src="./js/axis.js"></script>
+        <script type="text/javascript" src="./js/scene.js"></script>
+        <script type="text/javascript" src="./js/controller.js"></script>
+
+    </head>
+    <body>
+        <div id="main-wrapper">
+            <h2>Demo Cube Slider Example</h2>
+            <div id="canvas3d-controller-wrapper">
+                <div id="canvas3d-wrapper">
+                    <div id="canvas3d-title">Simulator</div>            
+                    <div id="canvas3d-view"></div>           
+                </div>
+                <div id="controller-wrapper">
+                    <div id="left-button">
+                        <button id="start">Start</button>
+                    </div>
+                    <div id="slider-wrapper">
+                        <input id="slider1" type="range" min="-360" max="360" step="10" value="0" oninput="sliderChange()">
+                    </div>
+                    <div id="right-button">
+                        <button id="stop">Stop</button>
+                    </div>
+                </div><!-- end of controller-wrapper -->
+            </div><!-- end of canvas3d-controller-wrapper -->
+        </div><!-- end of main-wrapper -->
+    </body>
+</html>
